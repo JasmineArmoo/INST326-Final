@@ -6,4 +6,4 @@ my_fruit = ["apple","grape","banana"]
 print(my_fruit [1:3])
 
 print(f"The entire fruit tuple: {fruit}")
-print(f"The entire my_list: {my_list}")
+print(f"The entire my_fruit: {my_fruit}")

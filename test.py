@@ -1,12 +1,17 @@
-fruit = ("apple","grape","banana")
-f1, f2, f3 = fruit
-print(f3)
+#1 Lynell
 
-my_fruit = ["apple","grape","banana"]
-print(my_fruit [1:3])
+#2 Prince
 
-print(f"The entire fruit tuple: {fruit}")
-print(f"The entire my_fruit: {my_fruit}")
-print(f"I like {f3}")
-print(f"I like {f2}")
-print(f"I dont like {f1}")
+class DemographicAnalyzer:
+ 	def __init__(self):
+       
+  	def analyze_data(self):
+    
+    ...
+        
+
+#3 Meanna
+
+#4 Nabil
+
+#5 Jasmine

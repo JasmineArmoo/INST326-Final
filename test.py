@@ -3,11 +3,18 @@
 #2 Prince
 
 class DemographicAnalyzer:
- 	def __init__(self):
-       
-  	def analyze_data(self):
-    
-    ...
+   
+
+    def __init__(self, demographics):
+        self.demographics = demographics
+
+    def filter_locations(self, target_age_range, target_income_range, min_education_level=None):
+        return [
+            location for location, info in self.demographics.items()
+            if info['age'] in target_age_range and info['income'] in target_income_range and
+            (min_education_level is None or info.get('education', 0) >= min_education_level)
+        ]
+
         
 
 #3 Meanna

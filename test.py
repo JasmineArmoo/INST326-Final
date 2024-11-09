@@ -37,3 +37,20 @@ class LocationProfitability:
 
 
 #5 Jasmine
+class UserInterface: 
+    """ Controls user input, location, and creates visualization from data
+   
+    Attributes:
+    budget (float): the available budget a company has for an ad
+    locations (list): the locations for analysis
+    """
+    def __init__(self, budget, location_data):
+        self.budget = budget
+        
+        self.location_data = location_data
+        
+
+if __name__ == "__main__":
+    x
+    
+import argparse

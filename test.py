@@ -92,6 +92,6 @@ class UserInterface:
         
 
 if __name__ == "__main__":
-    x
+    main()
     
 import argparse

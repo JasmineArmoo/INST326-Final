@@ -19,6 +19,26 @@ class DemographicAnalyzer:
 
 #3 Meanna
 
+class ResourceEvaluator:
+    def __init__(self, location_data):
+        """
+        Initializes with location data.
+        
+        :param location_data: Dictionary with location scores.
+        """
+        self.location_name = location_data['location_name']
+        self.infrastructure_score = location_data['infrastructure_score']
+        self.media_reach_score = location_data['media_reach_score']
+        self.other_factors_score = location_data['other_factors_score']
+
+    def evaluate_resources(self):
+        """
+        Calculates the total resource score.
+
+        :return: Total resource score.
+        """
+        return self.infrastructure_score + self.media_reach_score + self.other_factors_score
+
 #4 Nabil
 
 class LocationProfitability:

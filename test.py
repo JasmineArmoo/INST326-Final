@@ -14,4 +14,11 @@ class DemographicAnalyzer:
 
 #4 Nabil
 
+class BudgetOptimizer:
+ 	def __init__(self):
+    
+    def optimize_budgetprofit(self):
+    
+
+
 #5 Jasmine

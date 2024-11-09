@@ -14,10 +14,18 @@ class DemographicAnalyzer:
 
 #4 Nabil
 
-class BudgetOptimizer:
- 	def __init__(self):
+class LocationProfitability:
+    def __init__(self, location_name, ad_cost, projected_revenue, demographic_score, media_reach_score):
+        self.location_name = location_name
+        self.ad_cost = ad_cost
+        self.projected_revenue = projected_revenue
+        self.demographic_score = demographic_score
+        self.media_reach_score = media_reach_score
+        self.profitability_score = self.calculate_profitability()
     
-    def optimize_budgetprofit(self):
+    def calculate_roi(self):
+        """Calculates the return on investment (ROI) for this location."""
+        return (self.projected_revenue - self.ad_cost) / self.ad_cost
     
 
 

@@ -1,4 +1,25 @@
 #1 Lynell
+class DataLoader:
+    def __init__(self):
+        self.demographics = self.load_demographics('demographics.csv')
+        self.resources = self.load_resources('resources.csv')
+        self.costs = self.load_costs('costs.csv')
+        self.profits = self.load_profits('profits.csv')
+
+    def load_demographics(self, filename):
+        data = {}
+        try:
+            with open(filename, 'r') as file:
+                reader = csv.DictReader(file)
+                for row in reader:
+                    data[row['Location']] = {
+                        'age': int(row['Age']),
+                        'income': int(row['Income'])
+                    }
+            return data
+        except FileNotFoundError:
+            print(f"Error: File {filename} not found.")
+            return {}
 
 #2 Prince
 

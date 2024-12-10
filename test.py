@@ -418,6 +418,33 @@ class UserInterface:
         parser.add_argument("--demographics", type=str, default="demographics.json", help="Demographics data file")
         return parser.parse_args()
     
+    def check_budget(self, budget):
+        """
+        Validates the budget input to ensure it is a positive number and of the correct type.
+
+        Args:
+            budget (str, int, float): The user's input for the advertising budget.
+
+        Returns:
+            bool: True if the budget is valid 
+            
+        Raises: 
+            ValueError otherwise.
+            
+        Author: Prince
+        """
+        if isinstance(budget, str):
+            budget = budget.strip().replace(",", "")
+            try:
+                budget = float(budget)
+            except ValueError:
+                raise ValueError(f"Invalid budget format: '{budget}'. Please enter a valid numeric value.")
+
+        if not isinstance(budget, (int, float)) or budget <= 0:
+            raise ValueError("Budget must be a positive number.")
+
+        return True
+    
     def run(self):
         """
         This method executes the program's main workflow, integrating various components.

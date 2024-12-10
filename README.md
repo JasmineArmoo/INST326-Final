@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-The **Advertisement Placement Tool** is designed to help companies strategically place billboard advertisements by identifying the most cost-effective locations. Using publicly available data from 25 major U.S. cities, the tool calculates **Audience Reach**, **Demographic Fit Score**, and **Cost Efficiency Score**. Users can customize inputs like age range, income, employed percentage, and budget, and the program recommends optimal locations based on these criteria. The results include a ranked list of cities, budget allocations, and a visual representation of cost efficiency.
-
----
+The Advertisement Placement Tool is designed to help companies strategically place billboard advertisements by identifying the most cost-effective locations. Using publicly available data from 25 major U.S. cities, the tool calculates Audience Reach, Demographic Fit Score, and Cost Efficiency Score. Users can customize inputs like age range, income, employed percentage, and budget, and the program recommends optimal locations based on these criteria. The results include a ranked list of cities, budget allocations, and a visual representation of cost efficiency.
 
 ## Files in Repository
 
@@ -13,7 +11,6 @@ The **Advertisement Placement Tool** is designed to help companies strategically
 3. **`requirements.txt`**: Lists Python libraries required for the program.
 4. **`README.md`**: This file, explaining our project and examples on how to use it. 
 
----
 
 ## How to Run the Program
 
@@ -38,7 +35,6 @@ The **Advertisement Placement Tool** is designed to help companies strategically
    python3 main.py --budget 50000 --age 25-35 --income 75000-120000 --employedpercentage 20 --top_num 3
    ```
 
----
 
 ## Outputs
 
@@ -47,7 +43,7 @@ The **Advertisement Placement Tool** is designed to help companies strategically
 3. **Visualizations**: A bar chart of cost efficiency scores (`advertising_chart.png`).
 4. **Exported Report**: A summary of results and budget allocations (`advertising_results.txt`).
 
----
+
 
 ## Methodology
 
@@ -63,7 +59,6 @@ This score shows the cost-effectiveness of each location.
 Budgets are allocated proportionally to the cost efficiency score of each location:
 Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
----
 
 ## Attribution Table
 
@@ -80,16 +75,14 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 | `UserInterface.display_results`| Jasmine      | visualizing with pyplot, formatting output |
 | `UserInterface.save_results_to_file`| Jasmine | file handling, formatted output            |
 
----
 
-## Data Sources
+## Sources We Used
 
 1. **City Information**: [Data USA](https://datausa.io/)
 2. **Billboard Ad Costs**: [Alluvit Media](https://www.alluvitmedia.com/billboard-advertising.php)
 3. **Foot Traffic**: [Unacast](https://www.unacast.com/)
 4. **Population Statistics**: [World Population Review](https://worldpopulationreview.com/us-cities)
 
----
 
 ## Key Features:
 - **Customizable Inputs**: Users can set specific demographic and budget preferences.

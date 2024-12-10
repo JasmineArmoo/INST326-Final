@@ -87,10 +87,10 @@ This resource provides detailed demographic, economic, and social data for citie
 This website offers insights into billboard advertising costs across different locations in the U.S. It provided the monthly billboard ad cost data required to calculate cost efficiency scores for various cities. The information was instrumental in determining the financial feasibility of advertising campaigns in specific regions.
 
 **Unacast. (n.d.). Foot Traffic Data.** Retrieved from [https://www.unacast.com/](https://www.unacast.com/)  
-Unacast takes foot traffic data by analyzing movement patterns in specific locations using sensors and other tracking technology. This data allowed us to estimate audience reach for each city location by providing us with information about the amount of people passing through areas where billboards were present. As a result, it helped our group's calculations when determining the effectiveness of potential advertising sites.
+Unacast collects foot traffic data which is essentially the amount of individuals who walk by or into a location during a specific point of time. They do this by analyzing movement patterns in specific locations using sensors and other tracking technology. The data they collected allowed our group to estimate audience reach for each city location by providing information about the number of people passing through areas where billboards were present. As a result, it helped our group with calculations when determining the effectiveness of potential advertising sites.
 
 **World Population Review. (n.d.). US Cities by Population.** Retrieved from [https://worldpopulationreview.com/us-cities](https://worldpopulationreview.com/us-cities)  
-This website provides current population statistics for cities across the United States. Our group used it in order to to select the most populated cities as the focus of the project. This ensured the data used were areas with significant advertising potential. This website also aided in calculations for metrics we used like employed population percentages.
+This website provides current census and population statistics for cities across the United States. Our group used it in order to to select the most populated cities as the focus of the project. This ensured the data used were areas with significant advertising potential. This website also aided our calculations for metrics we used like employed population percentages.
 
 ## Key Features:
 - **Customizable Inputs**: Users can set specific demographic and budget preferences.

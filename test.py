@@ -507,18 +507,17 @@ class UserInterface:
         self.save_results_to_file(top_locations, budget_optimizer, averages)
 
     def display_results(self, top_locations):
-       """ 
+       """
        Shows the largest advertising locations based off of its cost efficiency
        
        Args:
-            top_locations (dictionary list): A lists of the highest ranked 
+            top_locations (dictionary list): A lists of the highest ranked
             locations and their features (name, reach, cost efficiency score)
        
        Side effects:
             Prints the best locations to console
        
        Author: Jasmine Armoo
-       Technique: F-strings containing expressions
        """
        print("Top Advertising Locations:\n")
        for loc in top_locations:
@@ -529,19 +528,17 @@ class UserInterface:
 
     def display_bar_chart(self, top_locations):
        """
-       Creates bar chart which shows the best advertising areas based off of 
+       Creates bar chart which shows the best advertising areas based off of
        their cost efficiency score
        
        Args:
-            top_locations (dictionary list):  A lists of the highest ranked 
+            top_locations (dictionary list):  A lists of the highest ranked
             locations and their features that are going to be visualized
        
-       
        Side effects:
-            Creates a bar chart using with Matplotlib,and saves it as an 
+            Creates a bar chart using with Matplotlib,and saves it as an
             image file
 
-       
        Author: Jasmine Armoo
        Technique: Visualizing data with pyplot
        """
@@ -557,43 +554,51 @@ class UserInterface:
 
        plt.savefig("advertising_chart.png")
        print("\nGraph saved as advertising_chart.png")
-      
+     
        plt.show()
 
-    def save_results_to_file(self, top_locations, budget_optimizer):
+    def save_results_to_file(self, top_locations, budget_optimizer, averages):
        """
        Saves highest ranked locations and their budget allocations to text file
        
        Args:
-            top_location (dictionary list): A lists of the highest ranked 
+            top_location (dictionary list): A lists of the highest ranked
             locations and their features that are going to be visualized
-            
+           
             budget_optimizer (Budget): The budget object that tracks and
             allocates location budgets
-            
+           
         Side effects:
             Creates advertising_results.txt and writes to file
+           
+        Techniques:
+            - with statements
+           
+        Author: Jasmine Armoo
 
-       
        """
        with open("advertising_results.txt", "w") as file:
-           file.write("Top Advertising Locations:\n")
-           for loc in top_locations:
-               file.write(f"Location: {loc['location_name']}, "
+        file.write("Top Advertising Locations:\n")
+        for loc in top_locations:
+            file.write(f"Location: {loc['location_name']}, "
                        f"Cost Efficiency Score: {loc['cost_efficiency_score']:.2f}, "
                        f"Audience Reach: {loc['audience_reach']:.2f}\n")
 
+        file.write("\nAverage Metrics:\n")
+        file.write(f"Average Age: {averages['age']:.2f} years\n")
+        file.write(f"Average Income: ${averages['income']:.2f}\n")
+        file.write(f"Average Employed Percentage: {averages['employedpercentage']:.2f}%\n")
+       
+        file.write("\nBudget Allocation:\n")
+        file.write(f"Total Budget: ${budget_optimizer.total_budget:.2f}\n")
+        for loc in top_locations:
+            file.write(f"{loc['location_name']}: Allocated Budget: ${loc['allocated_budget']:.2f}\n")
+        remaining_budget = budget_optimizer.total_budget - sum([loc["allocated_budget"] for loc in top_locations])
+        file.write(f"\nRemaining Budget: ${remaining_budget:.2f}\n")
 
-           file.write("\nBudget Allocation:\n")
-           file.write(f"Total Budget: ${budget_optimizer.total_budget:.2f}\n")
-           for loc in top_locations:
-               file.write(f"{loc['location_name']}: Allocated Budget: ${loc['allocated_budget']:.2f}\n")
-           remaining_budget = self.args.budget - sum([loc["allocated_budget"] for loc in top_locations])
-           file.write(f"\nRemaining Budget: ${remaining_budget:.2f}\n")
-      
-       print("Results saved as advertising_results.txt")
-
+        print("Results saved as advertising_results.txt")
+       
 if __name__ == "__main__":
    ui = UserInterface()
-   ui.run()  
+   ui.run()   
 

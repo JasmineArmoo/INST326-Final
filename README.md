@@ -14,19 +14,7 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 ## How to Run the Program
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourRepo/advertisement-placement-tool.git
-   ```
-2. Navigate to the directory:
-   ```bash
-   cd advertisement-placement-tool
-   ```
-3. Install libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the program with your chosen parameters:
+### Run the program with your chosen parameters:
    ```bash
    python3 main.py --budget <TOTAL_BUDGET> --age <AGE_RANGE> --income <INCOME_RANGE> --employedpercentage <EMPLOYED_PERCENTAGE> --top_num <NUMBER_OF_LOCATIONS>
    ```

@@ -2,18 +2,16 @@
 
 ## Project Overview
 
-The **Advertisement Placement Tool** is designed to help companies strategically place billboard advertisements by identifying the most cost-effective locations. Using publicly available data from 25 major U.S. cities, the tool calculates metrics such as **Audience Reach**, **Demographic Fit Score**, and **Cost Efficiency Score**. Users can customize inputs like age range, income, employed percentage, and budget, and the program recommends optimal locations based on these criteria. The results include a ranked list of cities, budget allocations, and a visual representation of cost efficiency.
-
-This project demonstrates the practical application of data analysis and budget optimization techniques, offering a streamlined solution for improving advertising strategies.
+The **Advertisement Placement Tool** is designed to help companies strategically place billboard advertisements by identifying the most cost-effective locations. Using publicly available data from 25 major U.S. cities, the tool calculates **Audience Reach**, **Demographic Fit Score**, and **Cost Efficiency Score**. Users can customize inputs like age range, income, employed percentage, and budget, and the program recommends optimal locations based on these criteria. The results include a ranked list of cities, budget allocations, and a visual representation of cost efficiency.
 
 ---
 
 ## Files in Repository
 
-1. **`main.py`**: Core Python program implementing all features of the tool.
-2. **`demographics.csv`**: Sample data file our group created with city-specific information.
+1. **`main.py`**: Python program implementing all features of the tool.
+2. **`demographics.csv`**: Sample data file our group did research on to create with city-specific information that will be used to assign optimal locations for the user. 
 3. **`requirements.txt`**: Lists Python libraries required for the program.
-4. **`README.md`**: Documentation explaining the project and how to use it.
+4. **`README.md`**: This file, explaining our project and examples on how to use it. 
 
 ---
 
@@ -27,7 +25,7 @@ This project demonstrates the practical application of data analysis and budget 
    ```bash
    cd advertisement-placement-tool
    ```
-3. Install required libraries:
+3. Install libraries:
    ```bash
    pip install -r requirements.txt
    ```
@@ -35,9 +33,9 @@ This project demonstrates the practical application of data analysis and budget 
    ```bash
    python3 main.py --budget <TOTAL_BUDGET> --age <AGE_RANGE> --income <INCOME_RANGE> --employedpercentage <EMPLOYED_PERCENTAGE> --top_num <NUMBER_OF_LOCATIONS>
    ```
-   Example:
+   Example we used in our presentation which is the company Apples target market:
    ```bash
-   python3 main.py --budget 10000 --age 25-35 --income 50000-80000 --employedpercentage 20 --top_num 5
+   python3 main.py --budget 50000 --age 25-35 --income 75000-120000 --employedpercentage 20 --top_num 3
    ```
 
 ---
@@ -54,22 +52,16 @@ This project demonstrates the practical application of data analysis and budget 
 ## Methodology
 
 ### 1. **Audience Reach**:
-\[
-\text{Audience Reach} = \text{Foot Traffic} \times \left( \frac{\text{Employed Population}}{\text{Total Population}} \right)
-\]
-This metric estimates how many people are likely to see an ad at a given location by combining movement data with demographic details.
+Audience Reach = round(Foot Traffic*(Employed Population)/Population)
+This estimates how many people are likely to see an ad at a given location by combining movement data with demographic details.
 
 ### 2. **Cost Efficiency Score**:
-\[
-\text{Cost Efficiency Score} = \frac{\text{Audience Reach}}{\text{Ad Cost}}
-\]
-This score evaluates the cost-effectiveness of each location, helping prioritize those with the best value.
+Cost Efficiency Score = Audience Reach/Ad Cost
+This score shows the cost-effectiveness of each location.
 
 ### 3. **Budget Allocation**:
 Budgets are allocated proportionally to the cost efficiency score of each location:
-\[
-\text{Allocated Budget} = \left( \frac{\text{Location's Cost Efficiency Score}}{\text{Total Cost Efficiency Score}} \right) \times \text{Total Budget}
-\]
+Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
 ---
 
@@ -97,13 +89,9 @@ Budgets are allocated proportionally to the cost efficiency score of each locati
 3. **Foot Traffic**: [Unacast](https://www.unacast.com/)
 4. **Population Statistics**: [World Population Review](https://worldpopulationreview.com/us-cities)
 
-We selected the most populous cities in the U.S. with publicly available data on population, foot traffic, billboard ad costs, and employment statistics to ensure the tool provides robust, accurate insights.
-
 ---
 
 ## Key Features:
 - **Customizable Inputs**: Users can set specific demographic and budget preferences.
 - **Dynamic Rankings**: Locations are evaluated using real-world data and prioritized by cost efficiency.
 - **Clear Visualizations**: A bar chart and summary file make results easy to interpret and share.
-
-This project reflects our ability to design innovative, data-driven solutions for real-world challenges, using Python programming principles and teamwork to deliver a cohesive and functional tool.

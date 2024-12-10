@@ -117,6 +117,38 @@ class Demographic:
               (min_employed_percentage is None or (info["employedpopulation"] / info["population"]) * 100 >= min_employed_percentage)
        ]
 
+class Ranker:
+   """
+   A class used to evaluate and rank advertising locations based on cost efficiency and audience reach.
+   """
+   def __init__(self):
+       self.locations = []
+
+
+   def add_location(self, location_name, ad_cost, foottraffic, employedpopulation, population):
+       audience_reach = self.audience_reach(foottraffic, employedpopulation, population)
+       cost_efficiency_score = self.cost_efficiency_score(audience_reach, ad_cost)
+
+
+       self.locations.append({
+           "location_name": location_name,
+           "ad_cost": ad_cost,
+           "audience_reach": audience_reach,
+           "cost_efficiency_score": cost_efficiency_score
+       })
+
+
+   def audience_reach(self, foottraffic, employedpopulation, population):
+       return round(foottraffic * (employedpopulation / population))
+      
+   def cost_efficiency_score(self, audience_reach, ad_cost):
+       if ad_cost == 0:
+           return 0
+       return audience_reach / ad_cost
+
+
+   def rank_locations(self, top_num=24):
+       return sorted(self.locations, key=lambda loc: loc["cost_efficiency_score"], reverse=True)[:top_num]
 
 
 

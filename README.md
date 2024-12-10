@@ -40,8 +40,8 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 1. **Ranked Locations**: A prioritized list of cities based on cost efficiency.
 2. **Budget Allocation**: A detailed breakdown of the budget assigned to each top location.
-3. **Visualizations**: A bar chart of cost efficiency scores (`advertising_chart.png`).
-4. **Exported Report**: A summary of results and budget allocations (`advertising_results.txt`).
+3. **Visualizations**: A bar chart of cost efficiency scores and their locations.
+4. **Exported Report**: A summary of results and budget allocations.
 
 
 

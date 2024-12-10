@@ -64,25 +64,29 @@ Budgets are allocated proportionally to the cost efficiency score of each locati
 Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
 
-## Attribution Table
+## Attribute Table
 
-| **Method/Function**             | **Primary Author** | **Techniques Demonstrated**                            |
-|----------------------------------|--------------------|--------------------------------------------------------|
-| `Demographic.load_demographics` | Lynell             | `with` statements, error handling                      |
-| `Demographic.filter_locations`  | Lynell             | List comprehensions, conditional logic                 |
-| `Ranker.add_location`           | Prince             | Keyword arguments, f-strings                          |
-| `Ranker.audience_reach`         | Prince             | Mathematical calculations, division error handling     |
-| `Ranker.cost_efficiency_score`  | Prince             | Conditional expressions, division error prevention     |
-| `Ranker.rank_locations`         | Prince             | `key` function with `sorted()`                        |
-| `Budget.allocate_budget`        | Meanna             | List comprehensions, proportional calculations         |
-| `Budget.optimal_spending`       | Meanna             | Attribute assignment, multiplication                   |
-| `Budget.adjust_budget_allocation` | Meanna            | Iteration with conditionals, attribute modification    |
-| `Budget.track_spending`         | Meanna             | Summation, f-strings for formatted output              |
-| `UserInterface.parse_args`      | Nabil              | `ArgumentParser` class, custom validation functions    |
-| `UserInterface.run`             | Nabil              | Composition of classes, data flow coordination         |
-| `UserInterface.display_results` | Jasmine            | Formatted print statements, string formatting          |
-| `UserInterface.display_bar_chart` | Jasmine           | Data visualization with `matplotlib`                  |
-| `UserInterface.save_results_to_file` | Jasmine        | File handling, formatted file output                  |
+| **Method/Function**              | **Primary Author** | **Techniques Demonstrated**                          |
+|-----------------------------------|--------------------|------------------------------------------------------|
+| `Demographic.__init__`           | Lynell             | Attribute initialization                             |
+| `Demographic.load_demographics`  | Lynell             | `with` statements, comprehensions                   |
+| `Demographic.filter_locations`   | Lynell             | Generator expressions                                |
+| `Ranker.__init__`                | Prince             | Attribute initialization                             |
+| `Ranker.add_location`            | Prince             | Optional parameters                                 |
+| `Ranker.audience_reach`          | Prince             | Use of a key function (`lambda`, `sorted()`)        |
+| `Ranker.cost_efficiency_score`   | Prince             | Mathematical calculations                            |
+| `Ranker.rank_locations`          | Jasmine            | Data visualization with `matplotlib`               |
+| `Budget.__init__`                | Meanna             | Attribute initialization                             |
+| `Budget.allocate_budget`         | Meanna             | List comprehensions                                 |
+| `Budget.optimal_spending`        | Meanna             | Attribute assignment                                |
+| `Budget.adjust_budget_allocation`| Meanna             | Iteration with conditionals                        |
+| `Budget.track_spending`          | Meanna             | Summation with list comprehensions                 |
+| `UserInterface.__init__`         | Nabil              | Composition of classes                             |
+| `UserInterface.parse_args`       | Nabil              | `ArgumentParser` class                             |
+| `UserInterface.run`              | Nabil              | Command flow orchestration                          |
+| `UserInterface.display_results`  | Jasmine            | F-strings containing expressions                   |
+| `UserInterface.display_bar_chart`| Jasmine            | Data visualization with `matplotlib`               |
+| `UserInterface.save_results_to_file` | Jasmine         | File handling, formatted file output               |
 
 
 ## References

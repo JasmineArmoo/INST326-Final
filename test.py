@@ -13,7 +13,7 @@ class Demographic:
         - load_demographics: Loads demographic data from a JSON file into a dictionary.
         - filter_locations: Filters locations based on age, income, and employment criteria.
 
-    Author: Lynell
+    Author: Lynell 
     """
 
     def __init__(self, filename):
@@ -82,7 +82,7 @@ class Demographic:
                (target_income_range is None or int(info["income"]) in target_income_range) and
                (min_employed_percentage is None or (info["employedpopulation"] / info["population"]) * 100 >= min_employed_percentage)
         ]
-
+        
 class Ranker:
    """
    A class used to evaluate and rank advertising locations based on cost efficiency and audience reach.
@@ -584,7 +584,3 @@ if __name__ == "__main__":
    ui = UserInterface()
    ui.run()   
    
-
-
-
-

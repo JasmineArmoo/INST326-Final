@@ -6,29 +6,70 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 ## Files in Repository
 
-1. **`main.py`**: Python program implementing all features of the tool.
-2. **`demographics.csv`**: Sample data file our group did research on to create with city-specific information that will be used to assign optimal locations for the user. 
+1. **`test.py`**: The main program, implementing all features of the tool.
+2. **`demographics.json`**: Sample data json file our group did research on to create with city-specific information that will be used to assign optimal locations for the user.
+
+Each city includes the following fields:
+
+population: total population of the city.
+age: average age of residents.
+income: average annual income of residents in USD.
+employedpopulation: number of employed residents.
+ad_cost: estimated cost (in USD) for running advertisements in the city.
+foottraffic: average daily foot traffic in the city.
+
+Example:
+
+"New York City": {
+    "population": 8620000.0,
+    "age": 37.5,
+    "income": 76607.0,
+    "employedpopulation": 4100000.0,
+    "ad_cost": 13531.96,
+    "foottraffic": 4270.0
+}
+
+
 3. **`README.md`**: This file, explaining our project and examples on how to use it. 
 
+4. **`advertising_results.txt`**: Output file generated after the program runs, summarizing the top advertising locations, budget allocations, and key statistics.
+
+5. **`advertising_chart.png`**: Horizontal bar chart of the top-ranked locations based on their cost efficiency scores.
 
 ## How to Run the Program
+
+### Install required modules/libraries
+```bash
+pip install matplotlib
+```
 
 ### Run the program with your chosen parameters:
    ```bash
    python3 test.py --budget <TOTAL_BUDGET> --age <AGE_RANGE> --income <INCOME_RANGE> --employedpercentage <EMPLOYED_PERCENTAGE> --top_num <NUMBER_OF_LOCATIONS>
    ```
-   Example we used in our presentation which is the company Apples target market:
+### For example:
    ```bash
-   python3 test.py --budget 50000 --age 25-35 --income 75000-120000 --employedpercentage 20 --top_num 3
+   python3 test.py --budget 10000 --age 30-40 --income 50000-80000 --employedpercentage 20 --demographics demographics.json
    ```
+#### Note:
+Notes on Parameters:
+
+The --budget parameter is required and must be a positive number. A ValueError will be raised if a negative or invalid value is provided.
+The parameters --age, --income, --employedpercentage, and --top_num are optional. If not specified, the program will use default values:
+--age: No filter applied.
+--income: No filter applied.
+--employedpercentage: No filter applied.
+--top_num: Default is 24.
+
 
 
 ## Outputs
 
 1. **Ranked Locations**: A prioritized list of cities based on cost efficiency.
-2. **Budget Allocation**: A detailed breakdown of the budget assigned to each top location.
-3. **Visualizations**: A bar chart of cost efficiency scores and their locations.
-4. **Exported Report**: A summary of results and budget allocations.
+2. **Average Metrics**: A detailed breakdown of the average, income, and employeed percentage of the filtered locations.
+3. **Budget Allocation**: A detailed breakdown of the budget assigned to each top location.
+4. **`advertising_chart.png`**: A bar chart of cost efficiency scores and their locations.
+5. **`advertising_results.txt`**: A summary of results and budget allocations.
 
 
 
@@ -57,24 +98,26 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 | **Method/Function**            | **Primary Author** | **Techniques Demonstrated**                |
 |--------------------------------|--------------------|--------------------------------------------|
 | `Demographic.__init__`         | Lynell             |                 |
-| `Demographic.load_demographics`| Lynell             | `with` statements                         |
+| `Demographic.load_demographics`| Lynell             | use of `json.load()`                        |
 | `Demographic.filter_locations` | Lynell             | conditional expressions                     |
 | `Ranker.__init__`              | Prince             |                                           |
-| `Ranker.add_location`          | Prince             | Optional parameters                       |
+| `Ranker.add_location`          | Prince             |                       |
 | `Ranker.audience_reach`        | Prince             |                 |
-| `Ranker.cost_efficiency_score` | Prince             | Use of a key function (`lambda`, `sorted`)|
-| `Ranker.rank_locations`        | Prince             |                                           |
+| `Ranker.cost_efficiency_score` | Prince             |                         |
+| `Ranker.rank_locations`        | Prince             | Use of a key function (`lambda`, `sorted`), Optional parameters                                     |
+| `Ranker.get_average`           | Prince             |                                           |
 | `Budget.__init__`              | Meanna             |                  |
-| `Budget.allocate_budget`       | Meanna             | List comprehensions                       |
-| `Budget.optimal_spending`      | Meanna             | Attribute assignment                      |
-| `Budget.adjust_budget_allocation` | Meanna          | Iteration with conditionals               |
-| `Budget.track_spending`        | Meanna             |                                           |
+| `Budget.allocate_budget`       | Meanna             | f-strings containing expressions                       |
+| `Budget.adjust_budget_allocation` | Meanna          |               |
+| `Budget.optimal_spending`      | Meanna             |                       |
+| `Budget.track_spending`        | Meanna             | comprehensions                                          |
 | `UserInterface.__init__`       | Nabil              |                    |
 | `UserInterface.parse_args`     | Nabil              | ArgumentParser class                      |
-| `UserInterface.run`            | Nabil              | Composition of two custom classes                |
-| `UserInterface.display_results`| Jasmine            | `f-strings` containing expressions        |
+| `UserInterface.check_budget`   | Prince             |          
+| `UserInterface.run`            | Nabil              | Composition of two custom classes         |
+| `UserInterface.display_results`| Jasmine            |        |
 | `UserInterface.display_bar_chart` | Jasmine         | Data visualization with pylot     |
-| `UserInterface.save_results_to_file` | Jasmine       |       | 
+| `UserInterface.save_results_to_file` | Jasmine       | `with statements`      | 
 
 ## References
 

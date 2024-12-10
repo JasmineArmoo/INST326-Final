@@ -85,14 +85,6 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 | `UserInterface.save_results_to_file` | Jasmine        | File handling, formatted file output                  |
 
 
-### Notes:
-1. Each method has a unique technique or set of techniques.
-2. Techniques like `with` statements, list comprehensions, and `ArgumentParser` are used once in the table and only attributed to one author.
-3. Techniques are chosen to highlight diverse programming skills demonstrated in the project.
-
-Let me know if you’d like further adjustments!
-
-
 ## References
 
 1. **Data USA.** (n.d.). *City Information*. Retrieved from [https://datausa.io/](https://datausa.io/)  

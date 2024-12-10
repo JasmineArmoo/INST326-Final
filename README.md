@@ -80,7 +80,7 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 | `Budget.allocate_budget`       | Meanna             | List comprehensions                       |
 | `Budget.optimal_spending`      | Meanna             | Attribute assignment                      |
 | `Budget.adjust_budget_allocation` | Meanna          | Iteration with conditionals               |
-| `Budget.track_spending`        | Meanna             | Summation with list comprehensions        |
+| `Budget.track_spending`        | Meanna             |                                           |
 | `UserInterface.__init__`       | Nabil              | Composition of classes                    |
 | `UserInterface.parse_args`     | Nabil              | ArgumentParser class                      |
 | `UserInterface.run`            | Nabil              | Command flow orchestration                |

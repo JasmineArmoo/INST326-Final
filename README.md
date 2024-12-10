@@ -11,12 +11,12 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 Each city includes the following fields:
 
-population: total population of the city.
-age: average age of residents.
-income: average annual income of residents in USD.
-employedpopulation: number of employed residents.
-ad_cost: estimated cost (in USD) for running advertisements in the city.
-foottraffic: average daily foot traffic in the city.
+* `population`: total population of the city.
+* `age`: average age of residents.
+* `income`: average annual income of residents in USD.
+* `employedpopulation`: number of employed residents.
+* `ad_cost`: estimated cost (in USD) for running advertisements in the city.
+* `foottraffic`: average daily foot traffic in the city.
 
 Example:
 
@@ -52,14 +52,13 @@ pip install matplotlib
    python3 test.py --budget 10000 --age 30-40 --income 50000-80000 --employedpercentage 20 --demographics demographics.json
    ```
 #### Note:
-Notes on Parameters:
 
 The --budget parameter is required and must be a positive number. A ValueError will be raised if a negative or invalid value is provided.
 The parameters --age, --income, --employedpercentage, and --top_num are optional. If not specified, the program will use default values:
---age: No filter applied.
---income: No filter applied.
---employedpercentage: No filter applied.
---top_num: Default is 24.
+* --age: No filter applied.
+* --income: No filter applied.
+* --employedpercentage: No filter applied.
+* --top_num: Default is 24.
 
 
 

@@ -56,25 +56,25 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
 | **Method/Function**            | **Primary Author** | **Techniques Demonstrated**                |
 |--------------------------------|--------------------|--------------------------------------------|
-| `Demographic.__init__`         | Lynell             | Attribute initialization                  |
+| `Demographic.__init__`         | Lynell             |                 |
 | `Demographic.load_demographics`| Lynell             | `with` statements                         |
-| `Demographic.filter_locations` | Lynell             | Generator expressions                     |
+| `Demographic.filter_locations` | Lynell             | conditional expressions                     |
 | `Ranker.__init__`              | Prince             |                                           |
 | `Ranker.add_location`          | Prince             | Optional parameters                       |
-| `Ranker.audience_reach`        | Prince             | Mathematical calculations                 |
+| `Ranker.audience_reach`        | Prince             |                 |
 | `Ranker.cost_efficiency_score` | Prince             | Use of a key function (`lambda`, `sorted`)|
 | `Ranker.rank_locations`        | Prince             |                                           |
-| `Budget.__init__`              | Meanna             | Attribute initialization                  |
+| `Budget.__init__`              | Meanna             |                  |
 | `Budget.allocate_budget`       | Meanna             | List comprehensions                       |
 | `Budget.optimal_spending`      | Meanna             | Attribute assignment                      |
 | `Budget.adjust_budget_allocation` | Meanna          | Iteration with conditionals               |
 | `Budget.track_spending`        | Meanna             |                                           |
-| `UserInterface.__init__`       | Nabil              | Composition of classes                    |
+| `UserInterface.__init__`       | Nabil              |                    |
 | `UserInterface.parse_args`     | Nabil              | ArgumentParser class                      |
-| `UserInterface.run`            | Nabil              | Command flow orchestration                |
+| `UserInterface.run`            | Nabil              | Composition of two custom classes                |
 | `UserInterface.display_results`| Jasmine            | `f-strings` containing expressions        |
-| `UserInterface.display_bar_chart` | Jasmine         | Data visualization with `matplotlib`      |
-| `UserInterface.save_results_to_file` | Jasmine       | File handling, formatted file output      | 
+| `UserInterface.display_bar_chart` | Jasmine         | Data visualization with pylot     |
+| `UserInterface.save_results_to_file` | Jasmine       |       | 
 
 ## References
 

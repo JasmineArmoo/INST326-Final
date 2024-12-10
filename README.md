@@ -8,19 +8,18 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 1. **`main.py`**: Python program implementing all features of the tool.
 2. **`demographics.csv`**: Sample data file our group did research on to create with city-specific information that will be used to assign optimal locations for the user. 
-3. **`requirements.txt`**: Lists Python libraries required for the program.
-4. **`README.md`**: This file, explaining our project and examples on how to use it. 
+3. **`README.md`**: This file, explaining our project and examples on how to use it. 
 
 
 ## How to Run the Program
 
 ### Run the program with your chosen parameters:
    ```bash
-   python3 main.py --budget <TOTAL_BUDGET> --age <AGE_RANGE> --income <INCOME_RANGE> --employedpercentage <EMPLOYED_PERCENTAGE> --top_num <NUMBER_OF_LOCATIONS>
+   python3 test.py --budget <TOTAL_BUDGET> --age <AGE_RANGE> --income <INCOME_RANGE> --employedpercentage <EMPLOYED_PERCENTAGE> --top_num <NUMBER_OF_LOCATIONS>
    ```
    Example we used in our presentation which is the company Apples target market:
    ```bash
-   python3 main.py --budget 50000 --age 25-35 --income 75000-120000 --employedpercentage 20 --top_num 3
+   python3 test.py --budget 50000 --age 25-35 --income 75000-120000 --employedpercentage 20 --top_num 3
    ```
 
 

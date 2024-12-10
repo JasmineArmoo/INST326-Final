@@ -264,5 +264,105 @@ class Ranker:
        """
        return sorted(self.locations, key=lambda loc: loc["cost_efficiency_score"], reverse=True)[:top_num]
 
+class Budget:
+    """
+    Handles budget allocation for advertising locations based on cost efficiency scores.
+
+    This class calculates how to distribute the budget proportionally across top locations, 
+    tracks total spending, and allows for manual adjustments to allocations. It ensures the 
+    budget is allocated effectively to maximize advertising impact.
+
+    Author: Meanna
+    """
+
+    def __init__(self, total_budget, top_locations):
+        """
+        Initializes the Budget class with the total budget and top-ranked locations.
+
+        Args:
+            total_budget (float): The total amount of money available to allocate.
+            top_locations (list): A list of dictionaries with location details and cost efficiency scores.
+
+        Attributes:
+            total_budget (float): Stores the total budget for allocation.
+            top_locations (list): Holds the list of top locations with budget allocations and scores.
+
+        Side Effects:
+            Initializes the `total_budget` and `top_locations` attributes for the class.
+
+        Author: Meanna
+        Technique: Class attribute initialization.
+        """
+        self.total_budget = total_budget
+        self.top_locations = top_locations
+
+    def allocate_budget(self):
+        """
+        Allocates the total budget across locations based on their cost efficiency scores.
+
+        Side Effects:
+            Modifies the `top_locations` list by adding an `allocated_budget` key for each location.
+
+        Raises:
+            ValueError: If no valid cost efficiency scores are available (total score is 0).
+
+        Author: Meanna
+        Technique: List comprehensions for calculating totals and proportional values.
+        """
+        total_efficiency_score = sum([loc["cost_efficiency_score"] for loc in self.top_locations])
+        if total_efficiency_score == 0:
+            print("Error: No valid cost efficiency score. Cannot allocate budget.")
+            return
+        for loc in self.top_locations:
+            loc["allocated_budget"] = (loc["cost_efficiency_score"] / total_efficiency_score) * self.total_budget
+
+    def adjust_budget_allocation(self, location_name, new_budget):
+        """
+        Allows the user to adjust the budget for a specific location.
+
+        Args:
+            location_name (str): The name of the location to adjust.
+            new_budget (float): The new budget value to assign to the specified location.
+
+        Side Effects:
+            Updates the `allocated_budget` value for the specified location in the `top_locations` list.
+
+        Author: Meanna
+        Technique: Iteration and conditional logic for targeted attribute modification.
+        """
+        for loc in self.top_locations:
+            if loc["location_name"] == location_name:
+                loc["allocated_budget"] = new_budget
+
+    def optimal_spending(self):
+        """
+        Marks the allocated budget for each location as its 'optimal spending.'
+
+        Side Effects:
+            Adds an `optimal_spending` key to each location in the `top_locations` list.
+
+        Author: Meanna
+        Technique: Attribute assignment.
+        """
+        for loc in self.top_locations:
+            loc["optimal_spending"] = loc["allocated_budget"]
+
+    def track_spending(self):
+        """
+        Tracks and summarizes the total spending and remaining budget.
+
+        Side Effects:
+            Prints a detailed summary of allocated budgets, the total budget, and any remaining funds.
+
+        Author: Meanna
+        Techniques: Summation with list comprehensions, f-strings for clean, formatted output.
+        """
+        total_spent = sum([loc["allocated_budget"] for loc in self.top_locations])
+        remaining_budget = self.total_budget - total_spent
+        print("\nBudget Allocation:")
+        print(f"Total Budget: ${self.total_budget:.2f}")
+        for loc in self.top_locations:
+            print(f"{loc['location_name']}: Allocated Budget: ${loc['allocated_budget']:.2f}")
+        print(f"Remaining Budget: ${remaining_budget:.2f}")
 
 

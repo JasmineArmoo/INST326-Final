@@ -11,12 +11,12 @@ The Advertisement Placement Tool our group created is made to help companies str
 
 * Each city includes the following fields:
 
-*     `population`: total population of the city.
-*     `age`: average age of residents.
-*     `income`: average annual income of residents in USD.
-*     `employedpopulation`: number of employed residents.
-*     `ad_cost`: estimated cost (in USD) for running advertisements in the city.
-*     `foottraffic`: average daily foot traffic in the city.
+    * `population`: total population of the city.
+    *  `age`: average age of residents.
+    *  `income`: average annual income of residents in USD.
+    * `employedpopulation`: number of employed residents.
+    * `ad_cost`: estimated cost (in USD) for running advertisements in the city.
+    * `foottraffic`: average daily foot traffic in the city.
 
 Example:
 

@@ -535,8 +535,6 @@ class UserInterface:
       
        plt.show()
 
-
-
    def save_results_to_file(self, top_locations, budget_optimizer):
        """
        Saves highest ranked locations and their budget allocations to text file
@@ -569,7 +567,6 @@ class UserInterface:
            file.write(f"\nRemaining Budget: ${remaining_budget:.2f}\n")
       
        print("Results saved as advertising_results.txt")
-
 
 if __name__ == "__main__":
    ui = UserInterface()

@@ -9,14 +9,14 @@ The Advertisement Placement Tool our group created is made to help companies str
 1. **`test.py`**: The main program, implementing all features of the tool.
 2. **`demographics.json`**: Sample data json file our group did research on to create with city-specific information that will be used to assign optimal locations for the user.
 
-* Each city includes the following fields:
+Each city includes the following fields:
 
-    * `population`: total population of the city.
-    *  `age`: average age of residents.
-    *  `income`: average annual income of residents in USD.
-    * `employedpopulation`: number of employed residents.
-    * `ad_cost`: estimated cost (in USD) for running advertisements in the city.
-    * `foottraffic`: average daily foot traffic in the city.
+* `population`: total population of the city.
+*  `age`: average age of residents.
+*  `income`: average annual income of residents in USD.
+* `employedpopulation`: number of employed residents.
+* `ad_cost`: estimated cost (in USD) for running advertisements in the city.
+* `foottraffic`: average daily foot traffic in the city.
 
 Example:
 

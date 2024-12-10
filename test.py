@@ -481,7 +481,8 @@ class UserInterface:
 
         self.display_bar_chart(top_locations)
         self.save_results_to_file(top_locations, budget_optimizer)
-   def display_results(self, top_locations):
+       
+    def display_results(self, top_locations):
        """ 
        Shows the largest advertising locations based off of its cost efficiency
        
@@ -502,7 +503,7 @@ class UserInterface:
                  f"Audience Reach: {loc['audience_reach']:.2f}")
 
 
-   def display_bar_chart(self, top_locations):
+    def display_bar_chart(self, top_locations):
        """
        Creates bar chart which shows the best advertising areas based off of 
        their cost efficiency score
@@ -535,7 +536,7 @@ class UserInterface:
       
        plt.show()
 
-   def save_results_to_file(self, top_locations, budget_optimizer):
+    def save_results_to_file(self, top_locations, budget_optimizer):
        """
        Saves highest ranked locations and their budget allocations to text file
        
@@ -570,7 +571,8 @@ class UserInterface:
 
 if __name__ == "__main__":
    ui = UserInterface()
-   ui.run()
+   ui.run()   
+   
 
 
 

@@ -357,3 +357,124 @@ class Budget:
        for loc in self.top_locations:
            print(f"{loc['location_name']}: Allocated Budget: ${loc['allocated_budget']:.2f}")
        print(f"Remaining Budget: ${remaining_budget:.2f}")
+       
+class UserInterface:
+    """
+    This class manages the user interface and coordinates the workflow of the advertising placement program.
+    It parses user input, filters data, ranks locations, optimizes budgets, and outputs results.
+    """
+
+    def __init__(self):
+        """
+        This method initializes the UserInterface instance by parsing command-line arguments.
+
+        Args:
+            None
+
+        Attributes:
+            args (argparse.Namespace): Parsed command-line arguments, it contains inputs such as budget,
+                                       target demographics, and file paths.
+
+        Returns:
+            None
+            
+        Author: Nabil Habona
+        """
+        self.args = self.parse_args()
+
+    def parse_args(self):
+        """
+        This method parses command-line arguments to configure the program's behavior.
+
+        Args:
+            None
+
+        Returns:
+            argparse.Namespace: A namespace object that contains parsed arguments, such as budget, age range,
+                                income range, employed population percentage, number of top locations, and
+                                the demographics data file.
+
+        Side effects:
+            It will raise a argparse.ArgumentTypeError if the input range format is invalid.
+            
+        Author: Nabil Habona
+        Techniques: the ArgumentParser class from the argparse module
+        """
+        def parse_range(value):
+            try:
+                start, end = map(int, value.split('-'))
+                if start > end:
+                    raise argparse.ArgumentTypeError(f"Invalid range: {value}")
+                return range(start, end + 1)
+            except ValueError:
+                raise argparse.ArgumentTypeError(f"Invalid range format: {value}")
+
+        parser = argparse.ArgumentParser(description="Strategic Advertising Placement Tool")
+        parser.add_argument("--budget", type=int, required=True, help="Total advertising budget")
+        parser.add_argument("--age", type=parse_range, help="Target age range (e.g., 25-35)")
+        parser.add_argument("--income", type=parse_range, help="Target income range (e.g., 50000-80000)")
+        parser.add_argument("--employedpercentage", type=float, help="Minimum employed population percentage (optional)")
+        parser.add_argument("--top_num", type=int, default=24, help="Number of top locations to display")
+        parser.add_argument("--demographics", type=str, default="demographics.json", help="Demographics data file")
+        return parser.parse_args()
+    
+    def run(self):
+        """
+        This method executes the program's main workflow, integrating various components.
+        First, checks the budget and loads the demographic data. Then, it filters the locations based on user-defined criteria, such as age range, income range, and employed percentage. 
+        Next, it ranks the locations based on cost efficiency. After ranking, it allocates budgets for the top locations. 
+        Finally, it displays the results, generates visualizations, and saves outputs to files.
+
+        Args:
+            None
+
+        Returns:
+            None
+
+        Side effects:
+            It will displays results in the console, generates a bar chart, and saves outputs to files.
+            
+        Author: Nabil Habona
+        Techniques: Composition
+        """
+        self.check_budget(self.args.budget)
+        
+        analyzer = Demographic(self.args.demographics)
+
+        target_age_range = self.args.age
+        target_income_range = self.args.income
+        min_employed_percentage = self.args.employedpercentage
+
+        filtered_locations = analyzer.filter_locations(
+            target_age_range=target_age_range,
+            target_income_range=target_income_range,
+            min_employed_percentage=min_employed_percentage
+        )
+
+        ranker = Ranker()
+        for location in filtered_locations:
+            data = analyzer.demographics[location]
+            ranker.add_location(
+                location_name=location,
+                ad_cost=data["ad_cost"],
+                foottraffic=data["foottraffic"],
+                employedpopulation=data["employedpopulation"],
+                population=data["population"],
+            )
+
+        top_locations = ranker.rank_locations(self.args.top_num)
+        self.display_results(top_locations)
+
+        averages = ranker.get_average(analyzer.demographics, filtered_locations)
+
+        print(f"\nThe average age for the selected locations is: {averages['age']:.2f} years")
+        print(f"The average income for the selected locations is: ${averages['income']:.2f}")
+        print(f"The average employed percentage for the selected locations is: {averages['employedpercentage']:.2f}%")
+
+        budget_optimizer = Budget(self.args.budget, top_locations)
+        budget_optimizer.allocate_budget()
+        budget_optimizer.optimal_spending()
+        budget_optimizer.track_spending()
+
+        self.display_bar_chart(top_locations)
+        self.save_results_to_file(top_locations, budget_optimizer, averages)

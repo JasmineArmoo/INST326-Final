@@ -78,16 +78,19 @@ Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
 ## References
 
-1. **Data USA.** (n.d.). *City Information*. Retrieved from [https://datausa.io/](https://datausa.io/)  
+### Annotated Bibliography
 
-2. **Alluvit Media.** (n.d.). *Billboard Advertising Costs*. Retrieved from [https://www.alluvitmedia.com/billboard-advertising.php](https://www.alluvitmedia.com/billboard-advertising.php)  
+**Data USA. (n.d.). City Information.** Retrieved from [https://datausa.io/](https://datausa.io/)  
+This resource provides detailed demographic, economic, and social data for cities across the United States. The data was used in this project to analyze various metrics such as population, age, and income distribution for effective advertising placement. Its user-friendly interface and visualization tools made it easy to identify key characteristics for our target audience.
 
+**Alluvit Media. (n.d.). Billboard Advertising Costs.** Retrieved from [https://www.alluvitmedia.com/billboard-advertising.php](https://www.alluvitmedia.com/billboard-advertising.php)  
+This website offers insights into billboard advertising costs across different locations in the U.S. It provided the monthly billboard ad cost data required to calculate cost efficiency scores for various cities. The information was instrumental in determining the financial feasibility of advertising campaigns in specific regions.
 
-3. **Unacast.** (n.d.). *Foot Traffic Data*. Retrieved from [https://www.unacast.com/](https://www.unacast.com/)  
+**Unacast. (n.d.). Foot Traffic Data.** Retrieved from [https://www.unacast.com/](https://www.unacast.com/)  
+Unacast aggregates foot traffic data by analyzing movement patterns in specific locations using advanced sensors and tracking technologies. This data was critical in estimating audience reach for each location by providing insights into the volume of people passing through billboard areas. It helped refine our calculations for determining the effectiveness of potential advertising sites.
 
-4. **World Population Review.** (n.d.). *US Cities by Population*. Retrieved from [https://worldpopulationreview.com/us-cities](https://worldpopulationreview.com/us-cities)  
- 
-
+**World Population Review. (n.d.). US Cities by Population.** Retrieved from [https://worldpopulationreview.com/us-cities](https://worldpopulationreview.com/us-cities)  
+This source provides up-to-date population statistics for cities across the United States. It was utilized to select the most populous cities as the focus of the project, ensuring the data used represented areas with significant advertising potential. The resource also supported calculations for metrics like employed population percentages.
 
 ## Key Features:
 - **Customizable Inputs**: Users can set specific demographic and budget preferences.

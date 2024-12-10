@@ -35,16 +35,17 @@ The Advertisement Placement Tool our group created is made to help companies str
 ## Methodology
 
 ## 1. **Audience Reach**:
-Audience Reach is a measure of how many people are likely to see an ad at a certain location. It depends on three things: foot traffic (how many people pass by the location), the employed population (how many people in the area have jobs and may have money to spend), and the total population of the area. The formula to calculate audience reach is:
+Audience Reach measures of how many people are likely to see an ad at a certain location. It relies on foot traffic (how many people pass by the location), the employed population (how many people in the area have jobs and may have money to spend), and the total population of the area. The formula to calculate audience reach is::
 
 ### Audience Reach = Foot Traffic × (Employed Population / Total Population)
-This gives you an estimate of how many people in the area are likely to see the ad based on these factors. 
+This gives an estimate of how many people in an area are likely to see the ad based on these factors. 
 
 ## 2. **Cost Efficiency Score**:
 Cost Efficiency Score shows how well a location gives you exposure for the money you spend. It answers the question: “How many people will see my ad for each dollar I spend?” A higher score means you're getting more exposure for your money.
+
 ### Cost Efficiency Score = Audience Reach / Ad Cost
-This tells you how cost-effective the location is for reaching people.
-The budget is split based on each location's Cost Efficiency Score. To decide how much money each location gets, we first calculate the total Cost Efficiency Score for all the selected locations. Then, each location receives a portion of the budget that corresponds to its share of the total score. Locations with higher scores get a larger portion of the budget, while those with lower scores receive less. For example, if two locations have scores of 4 and 6, the total score is 10. The first location would get 40% of the total budget, and the second location would get 60%. This way, the budget is allocated more efficiently, giving more money to locations that are considered better at reaching the target audience for the cost.
+The cost efficiency score indicates how cost-effective a location is for reaching with an audience.
+The budget is set by allocating according to each site’s Cost Efficiency Score. To determine the funding each location receives, we started by computing the overall Cost Efficiency Score for all the chosen locations. Subsequently, every site is allocated a segment of the budget based on its proportion of the overall score. Locations with a higher score receive a bigger share of the budget, while those with lower scores are allocated smaller shares. For example, if two places have ratings of 4 and 6, the combined score is 10. The initial site would receive 40% of the overall budget, while the subsequent site would obtain 60%. In this manner, the budget is allocated more effectively, providing more funds to places that excel at reaching the target audience for the expenditure.
 
 ## 3. **Budget Allocation**:
 Budgets are allocated proportionally to the cost efficiency score of each location:

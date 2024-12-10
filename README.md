@@ -59,33 +59,51 @@ Cost Efficiency Score shows how well a location gives you exposure for the money
 This tells you how cost-effective the location is for reaching people.
 The budget is split based on each location's Cost Efficiency Score. To decide how much money each location gets, we first calculate the total Cost Efficiency Score for all the selected locations. Then, each location receives a portion of the budget that corresponds to its share of the total score. Locations with higher scores get a larger portion of the budget, while those with lower scores receive less. For example, if two locations have scores of 4 and 6, the total score is 10. The first location would get 40% of the total budget, and the second location would get 60%. This way, the budget is allocated more efficiently, giving more money to locations that are considered better at reaching the target audience for the cost.
 
-### 3. **Budget Allocation**:
+## 3. **Budget Allocation**:
 Budgets are allocated proportionally to the cost efficiency score of each location:
 Allocated Budget = cost_efficiency_score / total_efficiency_score * total_budget
 
 
 ## Attribution Table
 
-| Method/Function          | Primary Author  | Techniques Demonstrated                     |
-|---------------------------|-----------------|---------------------------------------------|
-| `Demographic.load_demographics` | Lynell         | with statements, filtering                 |
-| `Demographic.filter_locations`  | Lynell         | comprehensions, sequence unpacking         |
-| `Ranker.add_location`     | Prince          | keyword arguments, f-strings               |
-| `Ranker.rank_locations`   | Prince          | key function with sorted()                 |
-| `Budget.allocate_budget`  | Meanna          |  calculation logic          |
-| `Budget.track_spending`   | Meanna          | f-strings, calculations with totals        |
-| `UserInterface.parse_args`| Nabil           | ArgumentParser class, validation functions |
-| `UserInterface.run`       | Nabil           | composition of classes                     |
-| `UserInterface.display_results`| Jasmine      | visualizing with pyplot, formatting output |
-| `UserInterface.save_results_to_file`| Jasmine | file handling, formatted output            |
+| **Method/Function**             | **Primary Author** | **Techniques Demonstrated**                            |
+|----------------------------------|--------------------|--------------------------------------------------------|
+| `Demographic.load_demographics` | Lynell             | `with` statements, error handling                      |
+| `Demographic.filter_locations`  | Lynell             | List comprehensions, conditional logic                 |
+| `Ranker.add_location`           | Prince             | Keyword arguments, f-strings                          |
+| `Ranker.audience_reach`         | Prince             | Mathematical calculations, division error handling     |
+| `Ranker.cost_efficiency_score`  | Prince             | Conditional expressions, division error prevention     |
+| `Ranker.rank_locations`         | Prince             | `key` function with `sorted()`                        |
+| `Budget.allocate_budget`        | Meanna             | List comprehensions, proportional calculations         |
+| `Budget.optimal_spending`       | Meanna             | Attribute assignment, multiplication                   |
+| `Budget.adjust_budget_allocation` | Meanna            | Iteration with conditionals, attribute modification    |
+| `Budget.track_spending`         | Meanna             | Summation, f-strings for formatted output              |
+| `UserInterface.parse_args`      | Nabil              | `ArgumentParser` class, custom validation functions    |
+| `UserInterface.run`             | Nabil              | Composition of classes, data flow coordination         |
+| `UserInterface.display_results` | Jasmine            | Formatted print statements, string formatting          |
+| `UserInterface.display_bar_chart` | Jasmine           | Data visualization with `matplotlib`                  |
+| `UserInterface.save_results_to_file` | Jasmine        | File handling, formatted file output                  |
 
 
-## Sources We Used
+### Notes:
+1. Each method has a unique technique or set of techniques.
+2. Techniques like `with` statements, list comprehensions, and `ArgumentParser` are used once in the table and only attributed to one author.
+3. Techniques are chosen to highlight diverse programming skills demonstrated in the project.
 
-1. **City Information**: [Data USA](https://datausa.io/)
-2. **Billboard Ad Costs**: [Alluvit Media](https://www.alluvitmedia.com/billboard-advertising.php)
-3. **Foot Traffic**: [Unacast](https://www.unacast.com/)
-4. **Population Statistics**: [World Population Review](https://worldpopulationreview.com/us-cities)
+Let me know if you’d like further adjustments!
+
+
+## References
+
+1. **Data USA.** (n.d.). *City Information*. Retrieved from [https://datausa.io/](https://datausa.io/)  
+
+2. **Alluvit Media.** (n.d.). *Billboard Advertising Costs*. Retrieved from [https://www.alluvitmedia.com/billboard-advertising.php](https://www.alluvitmedia.com/billboard-advertising.php)  
+
+
+3. **Unacast.** (n.d.). *Foot Traffic Data*. Retrieved from [https://www.unacast.com/](https://www.unacast.com/)  
+
+4. **World Population Review.** (n.d.). *US Cities by Population*. Retrieved from [https://worldpopulationreview.com/us-cities](https://worldpopulationreview.com/us-cities)  
+ 
 
 
 ## Key Features:

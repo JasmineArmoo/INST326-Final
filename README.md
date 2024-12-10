@@ -56,7 +56,7 @@ This gives you an estimate of how many people in the area are likely to see the 
 ### 2. **Cost Efficiency Score**:
 Cost Efficiency Score shows how well a location gives you exposure for the money you spend. It answers the question: “How many people will see my ad for each dollar I spend?” A higher score means you're getting more exposure for your money.
 ## Cost Efficiency Score = Audience Reach / Ad Cost
-# This tells you how cost-effective the location is for reaching people.
+This tells you how cost-effective the location is for reaching people.
 The budget is split based on each location's Cost Efficiency Score. To decide how much money each location gets, we first calculate the total Cost Efficiency Score for all the selected locations. Then, each location receives a portion of the budget that corresponds to its share of the total score. Locations with higher scores get a larger portion of the budget, while those with lower scores receive less. For example, if two locations have scores of 4 and 6, the total score is 10. The first location would get 40% of the total budget, and the second location would get 60%. This way, the budget is allocated more efficiently, giving more money to locations that are considered better at reaching the target audience for the cost.
 
 ### 3. **Budget Allocation**:

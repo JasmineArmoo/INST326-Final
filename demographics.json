@@ -1,0 +1,195 @@
+{
+    "New York City": {
+        "population": 8620000.0,
+        "age": 37.5,
+        "income": 76607.0,
+        "employedpopulation": 4100000.0,
+        "ad_cost": 13531.96,
+        "foottraffic": 4270.0
+    },
+    "Los Angeles": {
+        "population": 3880000.0,
+        "age": 36.5,
+        "income": 76244.0,
+        "employedpopulation": 1960000.0,
+        "ad_cost": 8220.93,
+        "foottraffic": 6390.0
+    },
+    "Chicago": {
+        "population": 2720000.0,
+        "age": 35.3,
+        "income": 71673.0,
+        "employedpopulation": 1380000.0,
+        "ad_cost": 7524.91,
+        "foottraffic": 4710.0
+    },
+    "Houston": {
+        "population": 2300000.0,
+        "age": 33.9,
+        "income": 60440.0,
+        "employedpopulation": 1130000.0,
+        "ad_cost": 5138.12,
+        "foottraffic": 5390.0
+    },
+    "Phoenix": {
+        "population": 1610000.0,
+        "age": 34.4,
+        "income": 72092.0,
+        "employedpopulation": 813556.0,
+        "ad_cost": 3295.64,
+        "foottraffic": 20700.0
+    },
+    "Philadelphia": {
+        "population": 1590000.0,
+        "age": 34.8,
+        "income": 57537.0,
+        "employedpopulation": 736737.0,
+        "ad_cost": 3641.83,
+        "foottraffic": 4940.0
+    },
+    "San Diego": {
+        "population": 1380000.0,
+        "age": 35.8,
+        "income": 98657.0,
+        "employedpopulation": 698895.0,
+        "ad_cost": 7259.39,
+        "foottraffic": 14500.0
+    },
+    "Dallas": {
+        "population": 1300000.0,
+        "age": 33.1,
+        "income": 63985.0,
+        "employedpopulation": 663340.0,
+        "ad_cost": 10512.61,
+        "foottraffic": 17100.0
+    },
+    "San Jose": {
+        "population": 1000000.0,
+        "age": 37.8,
+        "income": 136010.0,
+        "employedpopulation": 5259444.0,
+        "ad_cost": 6093.65,
+        "foottraffic": 11800.0
+    },
+    "Austin": {
+        "population": 958202.0,
+        "age": 34.2,
+        "income": 86556.0,
+        "employedpopulation": 570555.0,
+        "ad_cost": 7411.7,
+        "foottraffic": 15800.0
+    },
+    "Columbus": {
+        "population": 902449.0,
+        "age": 36.4,
+        "income": 76541.0,
+        "employedpopulation": 1100000.0,
+        "ad_cost": 2102.4,
+        "foottraffic": 19200.0
+    },
+    "San Francisco": {
+        "population": 851036.0,
+        "age": 39.3,
+        "income": 136689.0,
+        "employedpopulation": 497881.0,
+        "ad_cost": 12669.86,
+        "foottraffic": 3690.0
+    },
+    "Seattle": {
+        "population": 734603.0,
+        "age": 35.4,
+        "income": 116068.0,
+        "employedpopulation": 452728.0,
+        "ad_cost": 4901.8,
+        "foottraffic": 5350.0
+    },
+    "Denver": {
+        "population": 710800.0,
+        "age": 34.9,
+        "income": 85853.0,
+        "employedpopulation": 416271.0,
+        "ad_cost": 7522.88,
+        "foottraffic": 4790.0
+    },
+    "Nashville": {
+        "population": 684103.0,
+        "age": 34.6,
+        "income": 71238.0,
+        "employedpopulation": 382791.0,
+        "ad_cost": 3864.76,
+        "foottraffic": 16500.0
+    },
+    "Washington": {
+        "population": 670587.0,
+        "age": 34.8,
+        "income": 101722.0,
+        "employedpopulation": 369398.0,
+        "ad_cost": 3948.39,
+        "foottraffic": 3032.0
+    },
+    "Boston": {
+        "population": 665945.0,
+        "age": 32.9,
+        "income": 89212.0,
+        "employedpopulation": 372385.0,
+        "ad_cost": 6993.55,
+        "foottraffic": 12167.0
+    },
+    "Portland": {
+        "population": 646101.0,
+        "age": 38.3,
+        "income": 85876.0,
+        "employedpopulation": 367733.0,
+        "ad_cost": 5012.55,
+        "foottraffic": 4244.0
+    },
+    "Las Vegas": {
+        "population": 644835.0,
+        "age": 38.1,
+        "income": 66356.0,
+        "employedpopulation": 295026.0,
+        "ad_cost": 8177.72,
+        "foottraffic": 7647.0
+    },
+    "Kansas City": {
+        "population": 505958.0,
+        "age": 35.4,
+        "income": 65256.0,
+        "employedpopulation": 265204.0,
+        "ad_cost": 3970.31,
+        "foottraffic": 15300.0
+    },
+    "Atlanta": {
+        "population": 494838.0,
+        "age": 33.6,
+        "income": 77655.0,
+        "employedpopulation": 264039.0,
+        "ad_cost": 3612.11,
+        "foottraffic": 15100.0
+    },
+    "Miami": {
+        "population": 443665.0,
+        "age": 39.7,
+        "income": 54858.0,
+        "employedpopulation": 235810.0,
+        "ad_cost": 11377.12,
+        "foottraffic": 20578.0
+    },
+    "Oakland": {
+        "population": 437825.0,
+        "age": 37.5,
+        "income": 94389.0,
+        "employedpopulation": 233396.0,
+        "ad_cost": 9069.14,
+        "foottraffic": 10679.0
+    },
+    "Orlando": {
+        "population": 307738.0,
+        "age": 34.7,
+        "income": 66292.0,
+        "employedpopulation": 168816.0,
+        "ad_cost": 6621.33,
+        "foottraffic": 20362.0
+    }
+ }
+ 
